@@ -29,7 +29,7 @@ jobs:
           if [[ "${{ github.ref_type }}" != "tag" || "${{ github.ref_name }}" == "test-"* ]]; then
             names='["game"]'
           else
-            names='["witchinghours"]'
+            names='["reborn", "rejuvenation", "desolation", "witchinghours"]'
           fi
 
           windows=$(jq --compact-output --null-input --argjson names "$names" \
